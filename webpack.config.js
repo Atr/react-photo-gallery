@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Getting Started Webpack Tutorial'
+      template: './src/index.template.html'
     })
   ],
   output: {
