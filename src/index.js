@@ -19,17 +19,6 @@ const component = () => {
   element.classList.add('test');
 
   return element;
-
-  // let element = document.createElement('div');
-
-  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  // element.classList.add('test');
-
-  // let pIcon = new Image();
-  // pIcon.src = Pi;
-  // element.appendChild(pIcon);
-
-  // return element;
 }
 
 document.body.appendChild(component());
