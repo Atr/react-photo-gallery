@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.test {
+  border: 2px solid darkslategrey;
+  border-radius: 5px;
+  background-color: lightcyan;
+  margin: 30px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.fc {
+  display: flex;
+}
