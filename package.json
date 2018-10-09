@@ -1,0 +1,27 @@
+{
+  "name": "react-photo-gallery",
+  "version": "1.0.0",
+  "description": "A photo gallery built in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build-dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atrome/react-photo-gallery.git"
+  },
+  "author": "Alex Romanak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atrome/react-photo-gallery/issues"
+  },
+  "homepage": "https://github.com/atrome/react-photo-gallery#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
