@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = props => (
   <div>
-    Hello world!
+    Hello world! from React!
   </div>
 );
 

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build-dev": "webpack --mode development --watch"
+    "dev-mode": "npm run build-dev & npm run start-dev",
+    "build-dev": "webpack --mode development --watch",
+    "start-dev": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
+    "express": "^4.16.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   }
