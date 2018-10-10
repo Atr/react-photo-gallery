@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
-import './styles.css';
-import './appStyles.scss';
-import Pi from './pi.png';
-import Anchor from './anchor.svg';
+import './src/styles/styles.css';
+import './src/styles/appStyles.scss';
+import Pi from './src/images/pi.png';
+import Anchor from './src/images/anchor.svg';
 
 const component = () => {
   let element = document.createElement('div');
