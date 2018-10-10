@@ -1,0 +1,9 @@
+// Very simple .scss file just to test .scss compatibility
+
+$themeColor-Blue:  lightcyan;
+$themeText-Grey:   darkslategrey;
+
+body {
+  color: $themeText-Grey;
+  background-color: $themeColor-Blue;
+}

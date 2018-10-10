@@ -1,5 +1,7 @@
 import _ from 'lodash';
+
 import './styles.css';
+import './appStyles.scss';
 import Pi from './pi.png';
 
 const component = () => {
