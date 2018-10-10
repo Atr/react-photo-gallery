@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const PhotoGallery = props => (
-  <div>
-    Hello world! from React!
-  </div>
-);
+import PhotoSelector from './PhotoSelector';
+
+class PhotoGallery extends Component {
+  constructor(props) {
+    super(props);
+
+    // bind area
+
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <PhotoSelector pic={this.props.pics[0]} />
+    );
+  }
+};
 
 export default PhotoGallery;
