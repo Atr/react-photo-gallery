@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = props => (
+const PhotoGallery = props => (
   <div>
     Hello world! from React!
   </div>
 );
 
-export default App;
+export default PhotoGallery;
