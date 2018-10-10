@@ -6,12 +6,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './client/index.js',
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['client/dist']),
     new HtmlWebpackPlugin({
-      template: './src/index.template.html'
+      template: './client/src/index.template.html'
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
@@ -19,7 +19,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'client/dist')
   },
   module: {
     rules: [
@@ -28,7 +28,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env'] 
+          presets: ['@babel/preset-env', '@babel/preset-react'] 
         },
       },
       {
@@ -54,7 +54,7 @@ module.exports = {
           loader: 'url-loader',
           options: { 
             limit: 1000000,
-            name: 'images/[hash]-[name].[ext]'
+            name: '/images/[hash]-[name].[ext]'
           } 
         }]
       },
