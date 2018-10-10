@@ -1,6 +1,8 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -9,28 +11,53 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Getting Started Webpack Tutorial'
+      template: './src/index.template.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[hash].css",
     })
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules)/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env'] 
+        },
+      },
+      {
+        test:/\.(s*)css$/,
         use: [
-          'style-loader',
-          'css-loader'
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
         test: /\.(jpeg|jpg|png|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      }
-   	]
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'images/[hash]-[name].[ext]'  
+          }
+        }]
+      },
+      {
+        test: /\.svg$/,  
+        use: [{
+          loader: 'url-loader',
+          options: { 
+            limit: 1000000,
+            name: 'images/[hash]-[name].[ext]'
+          } 
+        }]
+      },
+    ]
   }
 };
