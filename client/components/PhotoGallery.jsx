@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import PhotoSelector from './PhotoSelector';
+import PhotoCarousel from './PhotoCarousel';
 
 class PhotoGallery extends Component {
   constructor(props) {
@@ -15,7 +16,10 @@ class PhotoGallery extends Component {
 
   render() {
     return (
-      <PhotoSelector pic={this.props.pics[0]} />
+      <div className='gallery'>
+        <PhotoSelector pic={this.props.pics[0]} />
+        <PhotoCarousel pics={this.props.pics} />
+      </div>
     );
   }
 };

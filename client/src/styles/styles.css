@@ -1,4 +1,4 @@
-/* Whole App */
+/* Universal styling */
 
 * {
   box-sizing: border-box;
@@ -7,14 +7,6 @@
 body {
   background-color: darkslategrey;
 }
-
-#app {
-  margin: auto;
-  width: 90%;
-  min-width: 400px;
-}
-
-
 
 /* Flexbox */
 
@@ -60,6 +52,14 @@ body {
 
 /* App-specific styling */
 
+#app {
+  margin: auto;
+  width: 90%;
+  min-width: 400px;
+}
+
+
+/* Main Photo Selector */
 .photo-selector {
   max-width: 900px;
   width: 90%;
@@ -79,6 +79,18 @@ body {
   max-width: 700px;
   width: 90%;
   height: auto;
+}
+
+/* Photo Carousel */
+
+.photo-carousel-ul {
+  list-style: none;
+}
+
+.photo-carousel-image {
+  display: block;
+  max-height: 40px;
+  width: auto; 
 }
 
 /* Testing */
