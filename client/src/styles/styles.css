@@ -121,12 +121,12 @@ body {
 
 .photo-carousel-ul {
   list-style: none;
-  padding: 0px 5px;
+  padding: 0px;
   margin: none;
 }
 
 .photo-carousel-list-item {
-  margin: 0px 5px;
+  margin: 0px 10px 0px 0px;
 }
 
 .photo-carousel-image {
