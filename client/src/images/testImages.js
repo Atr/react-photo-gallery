@@ -36,4 +36,79 @@ const testImages = [
   P17,
 ];
 
-export default testImages;
+// I realize I could map through the testImages array and
+// user Faker to generate the Lorem Ipsum.  Decided not to
+// do all that work considering this is just test data.
+
+const testImageObjs = [
+  {
+    img: P1,
+    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    img: P2,
+    caption: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+  },
+  {
+    img: P3,
+    caption: 'Et magnis dis parturient montes nascetur ridiculus.',
+  },
+  {
+    img: P4,
+    caption: 'Felis eget nunc lobortis mattis aliquam faucibus purus in.',
+  },
+  {
+    img: P5,
+    caption: 'Velit scelerisque in dictum non consectetur a erat nam.',
+  },
+  {
+    img: P6,
+    caption: 'In fermentum posuere urna nec tincidunt praesent semper feugiat, accumsan lacus vel facilisis volutpat est.',
+  },
+  {
+    img: P7,
+    caption: 'Condimentum lacinia quis vel eros donec ac odio tempor.',
+  },
+  {
+    img: P8,
+    caption: 'Laoreet non curabitur gravida arcu ac tortor dignissim.',
+  },
+  {
+    img: P9,
+    caption: 'Nibh sit amet commodo nulla facilisi.',
+  },
+  {
+    img: P10,
+    caption: 'Molestie nunc non blandit massa enim nec dui nunc, sit amet porttitor eget dolor morbi non arcu risus quis.',
+  },
+  {
+    img: P11,
+    caption: 'Elit pellentesque habitant morbi tristique senectus et netus et.',
+  },
+  {
+    img: P12,
+    caption: 'Iaculis urna id volutpat lacus laoreet non curabitur.',
+  },
+  {
+    img: P13,
+    caption: 'Elit pellentesque habitant morbi tristique.',
+  },
+  {
+    img: P14,
+    caption: 'Tellus at urna condimentum mattis pellentesque id nibh.',
+  },
+  {
+    img: P15,
+    caption: 'Scelerisque felis imperdiet proin fermentum leo vel orci porta non.',
+  },
+  {
+    img: P16,
+    caption: 'Eu sem integer.',
+  },
+  {
+    img: P17,
+    caption: 'Habitant morbi tristique senectus et netus et malesuada, aliquam faucibus purus in massa.',
+  },
+];
+
+export default testImageObjs;

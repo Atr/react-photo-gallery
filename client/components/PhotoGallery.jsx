@@ -10,7 +10,7 @@ class PhotoGallery extends Component {
     // bind area
 
     this.state = {
-      allPics: this.props.photos
+      allPics: this.props.photos,
     };
   }
 
