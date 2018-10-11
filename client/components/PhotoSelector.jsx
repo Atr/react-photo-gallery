@@ -1,7 +1,5 @@
 import React from 'react';
 
-// Need to add 'alt' for image
-
 const PhotoSelector = props => (
   <div className='photo-selector fc fd-c ai-c'>
     <div className='caption'>
@@ -12,7 +10,7 @@ const PhotoSelector = props => (
         Left arrow
       </button>
       <div className='center-image-container fc jc-c ai-fs'>
-        <img src={props.photo.img} alt='to be filled' className='center-image' />
+        <img src={props.photo.img} alt={props.photo.caption} className='center-image' />
       </div>
       <button type='button' className='right-selector-button'>
         Right arrow

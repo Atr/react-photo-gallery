@@ -7,7 +7,7 @@ const PhotoCarousel = props => (
     <div className='photo-carousel-container-wrapper fc jc-c'>
       <div className='fc photo-carousel-container'>
         <ul className='fc photo-carousel-ul'>
-          {props.photos.map(photo => <PhotoCarouselPhoto photo={photo} />)}
+          {props.photos.map(photo => <PhotoCarouselPhoto photo={photo} key={`key${photo.caption}-${photo.img}`} />)}
         </ul>
       </div>
     </div>
