@@ -59,9 +59,15 @@ body {
 }
 
 
+/* Gallery */
+
+.gallery {
+  width: 100%;
+}
+
 /* Main Photo Selector */
 .photo-selector {
-  max-width: 900px;
+  max-width: 1000px;
   width: 90%;
 }
 
@@ -74,39 +80,75 @@ body {
   width: 90%;
 }
 
+.left-selector-button {
+  /*width: 86.5px;*/
+  width: 10%;
+}
+
+.right-selector-button {
+  /*width: 86.5px;*/
+  width: 10%;
+}
+
+.center-image-container {
+  width: 80%;
+  max-width: 700px;
+}
+
 .center-image {
   display: block;
   max-width: 700px;
-  width: 90%;
+  width: 100%;
   height: auto;
 }
 
 /* Photo Carousel */
 
+.photo-carousel {
+  max-width: 1000px;
+  width: 90%;
+}
+
+.photo-carousel-container-wrapper {
+  width: 90%;
+}
+
+.photo-carousel-container {
+  width: 80%;
+  max-width: 700px;
+  overflow: hidden;
+}
+
 .photo-carousel-ul {
   list-style: none;
+  padding: 0px 5px;
+  margin: none;
+}
+
+.photo-carousel-list-item {
+  margin: 0px 5px;
 }
 
 .photo-carousel-image {
   display: block;
-  max-height: 40px;
+  max-height: 70px;
   width: auto; 
 }
 
 /* Testing */
 
 .test-1 {
-  border: 2px solid blue;
+  outline: 2px solid blue;
 }
 
 .test-2 {
-  border: 2px solid green;
+  outline: 2px solid green;
 }
 
 .test-3 {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 
 .test-4 {
-  border: 2px solid yellow;
+  outline: 2px solid yellow;
 }

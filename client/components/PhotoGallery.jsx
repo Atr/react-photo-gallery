@@ -16,7 +16,7 @@ class PhotoGallery extends Component {
 
   render() {
     return (
-      <div className='gallery'>
+      <div className='gallery fc fd-c jc-c ai-c'>
         <PhotoSelector pic={this.props.pics[0]} />
         <PhotoCarousel pics={this.props.pics} />
       </div>
