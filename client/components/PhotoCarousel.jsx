@@ -1,13 +1,13 @@
 import React from 'react';
 
-import PhotoCarouselPic from './PhotoCarouselPic';
+import PhotoCarouselPhoto from './PhotoCarouselPic';
 
 const PhotoCarousel = props => (
   <div className='photo-carousel fc jc-c'>
     <div className='photo-carousel-container-wrapper fc jc-c'>
       <div className='fc photo-carousel-container'>
         <ul className='fc photo-carousel-ul'>
-          {props.pics.map(pic => <PhotoCarouselPic pic={pic} />)}
+          {props.photos.map(photo => <PhotoCarouselPhoto photo={photo} />)}
         </ul>
       </div>
     </div>

@@ -6,4 +6,4 @@ import PhotoGallery from './components/PhotoGallery';
 
 import images from './src/images/testImages';
 
-ReactDOM.render(<PhotoGallery pics={images} />, document.getElementById('app'));
+ReactDOM.render(<PhotoGallery photos={images} />, document.getElementById('app'));

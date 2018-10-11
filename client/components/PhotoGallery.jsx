@@ -10,15 +10,15 @@ class PhotoGallery extends Component {
     // bind area
 
     this.state = {
-
+      allPics: this.props.photos
     };
   }
 
   render() {
     return (
       <div className='gallery fc fd-c jc-c ai-c'>
-        <PhotoSelector pic={this.props.pics[0]} />
-        <PhotoCarousel pics={this.props.pics} />
+        <PhotoSelector photo={this.props.photos[0]} />
+        <PhotoCarousel photos={this.props.photos} />
       </div>
     );
   }

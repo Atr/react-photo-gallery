@@ -12,7 +12,7 @@ const PhotoSelector = props => (
         Left arrow
       </button>
       <div className='center-image-container fc jc-c ai-fs'>
-        <img src={props.pic} alt='to be filled' className='center-image' />
+        <img src={props.photo} alt='to be filled' className='center-image' />
       </div>
       <button type='button' className='right-selector-button'>
         Right arrow
