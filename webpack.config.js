@@ -2,24 +2,24 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    app: './client/index.js',
+    app: './client/index.jsx',
   },
   plugins: [
     new CleanWebpackPlugin(['client/dist']),
     new HtmlWebpackPlugin({
-      template: './client/src/index.template.html'
+      template: './client/src/index.template.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[hash].css",
-    })
+      filename: '[name].[hash].css',
+    }),
   ],
   output: {
     filename: '[name].bundle.[hash].js',
-    path: path.resolve(__dirname, 'client/dist')
+    path: path.resolve(__dirname, 'client/dist'),
   },
   module: {
     rules: [
@@ -28,36 +28,37 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'] 
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
       {
-        test:/\.(s*)css$/,
+        test: /\.(s*)css$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.(jpeg|jpg|png|gif)$/,
         use: [{
           loader: 'file-loader',
           options: {
-            name: 'images/[hash]-[name].[ext]'  
-          }
-        }]
+            name: 'images/[hash]-[name].[ext]',
+          },
+        }],
       },
       {
-        test: /\.svg$/,  
+        test: /\.svg$/,
         use: [{
           loader: 'url-loader',
-          options: { 
+          options: {
             limit: 1000000,
-            name: '/images/[hash]-[name].[ext]'
-          } 
-        }]
+            name: '/images/[hash]-[name].[ext]',
+          },
+        }],
       },
-    ]
-  }
+    ],
+  },
+  resolve: { extensions: ['*', '.js', '.jsx'] },
 };

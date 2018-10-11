@@ -1,3 +1,100 @@
+/* Whole App */
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategrey;
+}
+
+#app {
+  margin: auto;
+  width: 90%;
+  min-width: 400px;
+}
+
+
+
+/* Flexbox */
+
+.fc {
+  display: flex;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.ai-fe {
+  align-items: flex-end;
+}
+
+/* App-specific styling */
+
+.photo-selector {
+  max-width: 900px;
+  width: 90%;
+}
+
+.caption {
+  text-align: center;
+  width: 90%;
+}
+
+.center-photo-selector {
+  width: 90%;
+}
+
+.center-image {
+  display: block;
+  max-width: 700px;
+  width: 90%;
+  height: auto;
+}
+
+/* Testing */
+
+.test-1 {
+  border: 2px solid blue;
+}
+
+.test-2 {
+  border: 2px solid green;
+}
+
+.test-3 {
+  border: 2px solid red;
+}
+
+.test-4 {
+  border: 2px solid yellow;
 }
