@@ -16,7 +16,14 @@ class PhotoGallery extends Component {
     this.state = {
       allPhotos: photos,
       focusPhotoIndex: 0,
+      windowWidth: 0,
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      windowWidth: window.innerWidth,
+    });
   }
 
   cycleRight() {
@@ -25,6 +32,7 @@ class PhotoGallery extends Component {
       const newFocusIdx = focusPhotoIndex + 1;
       this.setState({
         focusPhotoIndex: newFocusIdx,
+        windowWidth: window.innerWidth,
       });
     }
   }
@@ -35,6 +43,7 @@ class PhotoGallery extends Component {
       const newFocusIdx = focusPhotoIndex - 1;
       this.setState({
         focusPhotoIndex: newFocusIdx,
+        windowWidth: window.innerWidth,
       });
     }
   }
@@ -43,11 +52,12 @@ class PhotoGallery extends Component {
     const newFocusIdx = +e.target.id;
     this.setState({
       focusPhotoIndex: newFocusIdx,
+      windowWidth: window.innerWidth,
     });
   }
 
   render() {
-    const { allPhotos, focusPhotoIndex } = this.state;
+    const { allPhotos, focusPhotoIndex, windowWidth } = this.state;
     const focusPhoto = allPhotos[focusPhotoIndex];
 
     return (
@@ -61,6 +71,7 @@ class PhotoGallery extends Component {
           photos={allPhotos}
           focusPhotoIndex={focusPhotoIndex}
           choosePhoto={this.choosePhoto}
+          windowWidth={windowWidth}
         />
       </div>
     );

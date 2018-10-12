@@ -2,20 +2,30 @@ import React from 'react';
 
 import PhotoCarouselPhoto from './PhotoCarouselPhoto';
 
-const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto }) => {
+const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto, windowWidth }) => {
+  const photoCarouselPhotoWidth = 100; // px - Should match width set in styles.css
+  const photoCarouselPhotoMargin = 10; // px - Should match margin set in syles.css
+  
+  // The decimals in 'offSetPx' are to derive the width of the center image,
+  // so that I can center the corresponding carousel picture.
   let leftShift = 0;
-  let leftMargin = 0;
-  if (focusPhotoIndex > 2) {
-    leftShift = (focusPhotoIndex * 110) + 50;
-    leftMargin = 50;
-  }
+  const offSetPx = windowWidth * 0.9 * 0.9 * 0.9 * 0.8 * 0.5;
+  const photoShiftPx = (focusPhotoIndex
+      * (photoCarouselPhotoWidth + photoCarouselPhotoMargin))
+      + (photoCarouselPhotoWidth / 2);
+  const maxPx = photos.length * (photoCarouselPhotoWidth + photoCarouselPhotoMargin);
+  
+  // Below if statements correctly set the leftShift px to be within bounds.
+  if (photoShiftPx > offSetPx) leftShift = photoShiftPx - offSetPx;
+  if (offSetPx > (maxPx - photoShiftPx)) leftShift = maxPx - (offSetPx * 2) - photoCarouselPhotoMargin;
+  
   return (
     <div className='photo-carousel fc jc-c'>
       <div className='photo-carousel-container-wrapper fc jc-c'>
         <div className='fc photo-carousel-container'>
           <ul
             className='fc photo-carousel-ul'
-            style={{ transform: `translateX(-${leftShift}px)`, marginLeft: `${leftMargin}%` }}
+            style={{ transform: `translateX(-${leftShift}px)` }}
           >
             {photos.map((photo, idx) => {
               let focus = 'image-not-in-focus';

@@ -154,7 +154,6 @@ body {
 
 .center-image {
   display: block;
-  max-width: 700px;
   width: 100%;
   height: auto;
 }
@@ -180,6 +179,7 @@ body {
 .photo-carousel-ul {
   list-style: none;
   padding: 0px;
+  transition: transform 0.3s ease-out;
 }
 
 .photo-carousel-list-item {
