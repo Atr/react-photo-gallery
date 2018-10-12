@@ -55,7 +55,7 @@ body {
 #app {
   margin: auto;
   width: 90%;
-  min-width: 400px;
+  min-width: 500px;
 }
 
 
@@ -72,8 +72,14 @@ body {
 }
 
 .caption {
-  text-align: center;
   width: 90%;
+}
+
+.caption-container {
+  width: 80%;
+  max-width: 700px;
+  padding: 0px 10px;
+  min-height: 90px;
 }
 
 .center-photo-selector {
@@ -122,17 +128,27 @@ body {
 .photo-carousel-ul {
   list-style: none;
   padding: 0px;
-  margin: none;
 }
 
 .photo-carousel-list-item {
   margin: 0px 10px 0px 0px;
+  width: 100px;
+  max-height: 67px; 
+  overflow: hidden;
 }
 
 .photo-carousel-image {
   display: block;
-  max-height: 70px;
-  width: auto; 
+  height: auto;
+  width: 100%; 
+}
+
+.image-in-focus {
+  /**/
+}
+
+.image-not-in-focus {
+  filter: brightness(50%);
 }
 
 /* Testing */
