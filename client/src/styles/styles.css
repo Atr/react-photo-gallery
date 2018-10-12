@@ -189,6 +189,10 @@ body {
   overflow: hidden;
 }
 
+.photo-carousel-list-item:not(.image-not-in-focus) {
+  transition: .2s linear;
+}
+
 .photo-carousel-image {
   display: block;
   height: auto;
