@@ -122,17 +122,20 @@ body {
 .photo-carousel-ul {
   list-style: none;
   padding: 0px 0px 0px 0px;
-  /*transform: translateX(-50px);*/
+  margin-left: 50%;
 }
 
 .photo-carousel-list-item {
   margin: 0px 10px 0px 0px;
+  width: 100px;
+  max-height: 67px; 
+  overflow: hidden;
 }
 
 .photo-carousel-image {
   display: block;
-  max-height: 70px;
-  width: auto; 
+  height: auto;
+  width: 100%; 
 }
 
 .image-in-focus {
