@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhotoSelector = ({ photo, cycleLeft, cycleRight}) => (
+const PhotoSelector = ({ photo, cycleLeft, cycleRight }) => (
   <div className='photo-selector fc fd-c ai-c'>
     <div className='caption'>
       Caption goes here

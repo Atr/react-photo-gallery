@@ -2,7 +2,7 @@ import React from 'react';
 
 import PhotoCarouselPhoto from './PhotoCarouselPhoto';
 
-const PhotoCarousel = ({ photos, focusPhotoIndex }) => {
+const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto }) => {
   let leftShift;
   let leftMargin;
   if (focusPhotoIndex > 2) {
@@ -21,10 +21,17 @@ const PhotoCarousel = ({ photos, focusPhotoIndex }) => {
             style={{ transform: `translateX(-${leftShift}px)`, marginLeft: `${leftMargin}%` }}
           >
             {photos.map((photo, idx) => {
-              if (focusPhotoIndex === idx) {
-                return <PhotoCarouselPhoto photo={photo} key={`key${photo.caption}-${photo.img}`} focus='image-in-focus' />;
-              }
-              return <PhotoCarouselPhoto photo={photo} key={`key${photo.caption}-${photo.img}`} focus='image-not-in-focus' />;
+              let focus = 'image-not-in-focus';
+              if (focusPhotoIndex === idx) focus = 'image-in-focus';
+              return (
+                <PhotoCarouselPhoto
+                  photo={photo}
+                  focus={focus}
+                  idx={idx}
+                  key={`key${photo.caption}-${photo.img}`}
+                  choosePhoto={choosePhoto}
+                />
+              );
             })}
           </ul>
         </div>
