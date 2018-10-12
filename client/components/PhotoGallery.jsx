@@ -44,7 +44,7 @@ class PhotoGallery extends Component {
     return (
       <div className='gallery fc fd-c jc-c ai-c'>
         <PhotoSelector photo={focusPhoto} cycleRight={this.cycleRight} cycleLeft={this.cycleLeft} />
-        <PhotoCarousel photos={this.state.allPhotos} />
+        <PhotoCarousel photos={allPhotos} focusPhotoIndex={focusPhotoIndex} />
       </div>
     );
   }

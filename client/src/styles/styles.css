@@ -135,6 +135,10 @@ body {
   width: auto; 
 }
 
+.image-not-in-focus {
+  filter: brightness(50%);
+}
+
 /* Testing */
 
 .test-1 {

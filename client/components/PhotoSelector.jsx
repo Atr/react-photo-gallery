@@ -9,7 +9,7 @@ const PhotoSelector = props => (
       <button type='button' className='left-selector-button' onClick={props.cycleLeft}>
         Left arrow
       </button>
-      <div className='center-image-container fc jc-c ai-fs'>
+      <div className='center-image-container fc jc-c ai-c'>
         <img src={props.photo.img} alt={props.photo.caption} className='center-image' />
       </div>
       <button type='button' className='right-selector-button' onClick={props.cycleRight}>
