@@ -55,7 +55,7 @@ body {
 #app {
   margin: auto;
   width: 90%;
-  min-width: 400px;
+  min-width: 500px;
 }
 
 
@@ -122,7 +122,6 @@ body {
 .photo-carousel-ul {
   list-style: none;
   padding: 0px 0px 0px 0px;
-  margin-left: 50%;
 }
 
 .photo-carousel-list-item {
