@@ -121,8 +121,8 @@ body {
 
 .photo-carousel-ul {
   list-style: none;
-  padding: 0px;
-  margin: none;
+  padding: 0px 0px 0px 0px;
+  /*transform: translateX(-50px);*/
 }
 
 .photo-carousel-list-item {
@@ -133,6 +133,10 @@ body {
   display: block;
   max-height: 70px;
   width: auto; 
+}
+
+.image-in-focus {
+  /**/
 }
 
 .image-not-in-focus {
