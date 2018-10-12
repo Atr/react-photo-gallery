@@ -6,13 +6,13 @@ const PhotoSelector = props => (
       Caption goes here
     </div>
     <div className='center-photo-selector fc ai-c jc-sb'>
-      <button type='button' className='left-selector-button'>
+      <button type='button' className='left-selector-button' onClick={props.cycleLeft}>
         Left arrow
       </button>
       <div className='center-image-container fc jc-c ai-fs'>
         <img src={props.photo.img} alt={props.photo.caption} className='center-image' />
       </div>
-      <button type='button' className='right-selector-button'>
+      <button type='button' className='right-selector-button' onClick={props.cycleRight}>
         Right arrow
       </button>
     </div>
