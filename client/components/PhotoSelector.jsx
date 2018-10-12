@@ -2,8 +2,12 @@ import React from 'react';
 
 const PhotoSelector = ({ photo, cycleLeft, cycleRight }) => (
   <div className='photo-selector fc fd-c ai-c'>
-    <div className='caption'>
-      Caption goes here
+    <div className='caption fc jc-c'>
+      <div className='caption-container'>
+        <p>
+          {photo.caption}
+        </p>
+      </div>
     </div>
     <div className='center-photo-selector fc ai-c jc-sb'>
       <button type='button' className='left-selector-button' onClick={cycleLeft}>

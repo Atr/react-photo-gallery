@@ -72,8 +72,13 @@ body {
 }
 
 .caption {
-  text-align: center;
   width: 90%;
+}
+
+.caption-container {
+  width: 80%;
+  max-width: 700px;
+  padding: 0px 10px;
 }
 
 .center-photo-selector {
