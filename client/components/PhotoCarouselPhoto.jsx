@@ -1,12 +1,12 @@
 import React from 'react';
 
-const PhotoCarouselPhoto = props => {
-  const classList = `photo-carousel-list-item  ${props.focus}`;
+const PhotoCarouselPhoto = ({ photo, focus }) => {
+  const classList = `photo-carousel-list-item  ${focus}`;
   return (
     <li className={classList}>
-      <img src={props.photo.img} alt={props.photo.caption} className='photo-carousel-image' />
+      <img src={photo.img} alt={photo.caption} className='photo-carousel-image' />
     </li>
-  )
+  );
 };
 
 export default PhotoCarouselPhoto;

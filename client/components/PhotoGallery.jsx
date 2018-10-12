@@ -4,14 +4,14 @@ import PhotoSelector from './PhotoSelector';
 import PhotoCarousel from './PhotoCarousel';
 
 class PhotoGallery extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ photos }) {
+    super({ photos });
 
     this.cycleRight = this.cycleRight.bind(this);
     this.cycleLeft = this.cycleLeft.bind(this);
 
     this.state = {
-      allPhotos: this.props.photos,
+      allPhotos: photos,
       focusPhotoIndex: 0,
     };
   }
@@ -37,7 +37,6 @@ class PhotoGallery extends Component {
   }
 
   render() {
-
     const { allPhotos, focusPhotoIndex } = this.state;
     const focusPhoto = allPhotos[focusPhotoIndex];
 
