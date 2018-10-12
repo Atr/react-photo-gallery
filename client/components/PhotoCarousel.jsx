@@ -3,14 +3,11 @@ import React from 'react';
 import PhotoCarouselPhoto from './PhotoCarouselPhoto';
 
 const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto }) => {
-  let leftShift;
-  let leftMargin;
+  let leftShift = 0;
+  let leftMargin = 0;
   if (focusPhotoIndex > 2) {
     leftShift = (focusPhotoIndex * 110) + 50;
     leftMargin = 50;
-  } else {
-    leftShift = 0;
-    leftMargin = 0;
   }
   return (
     <div className='photo-carousel fc jc-c'>
