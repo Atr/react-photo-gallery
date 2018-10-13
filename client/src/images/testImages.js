@@ -42,12 +42,8 @@ const testImages = [
 
 const testImageObjs = [
   {
-    img: P1,
-    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
     img: P2,
-    caption: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     img: P3,
@@ -68,10 +64,6 @@ const testImageObjs = [
   {
     img: P7,
     caption: 'Condimentum lacinia quis vel eros donec ac odio tempor.',
-  },
-  {
-    img: P8,
-    caption: 'Laoreet non curabitur gravida arcu ac tortor dignissim.',
   },
   {
     img: P9,
