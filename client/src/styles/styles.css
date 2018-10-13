@@ -207,6 +207,11 @@ body {
   filter: brightness(50%);
 }
 
+.image-not-in-focus:hover {
+  transition: .2s linear;
+  filter: brightness(100%);
+}
+
 /* Testing */
 
 .test-1 {
