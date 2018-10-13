@@ -56,7 +56,12 @@ table {
 }
 
 body {
-  background-color: darkslategrey;
+  background-color: #1D1D1D;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 /* Flexbox */
@@ -101,6 +106,10 @@ body {
   align-items: flex-end;
 }
 
+.ai-s {
+  align-self: stretch;
+}
+
 /* App-specific styling */
 
 #app {
@@ -138,13 +147,34 @@ body {
 }
 
 .left-selector-button {
-  /*width: 86.5px;*/
   width: 10%;
 }
 
+.left-selector-button:focus {
+  outline: none;
+  /*outline: #f7f7f7 auto 3px;*/
+}
+
+.left-selector-button:hover {
+  background-color: #333333;
+}
+
 .right-selector-button {
-  /*width: 86.5px;*/
   width: 10%;
+}
+
+.right-selector-button:focus {
+  outline: none;
+  /*outline: #f7f7f7 auto 3px;*/
+}
+
+.right-selector-button:hover {
+  background-color: #333333;
+}
+
+.arrow {
+  width: 100%;
+  opacity: .8;
 }
 
 .center-image-container {
