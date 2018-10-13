@@ -1,3 +1,54 @@
+/* Eric Meyer CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* Universal styling */
 
 * {
@@ -5,7 +56,12 @@
 }
 
 body {
-  background-color: darkslategrey;
+  background-color: #1D1D1D;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 /* Flexbox */
@@ -50,6 +106,10 @@ body {
   align-items: flex-end;
 }
 
+.ai-s {
+  align-self: stretch;
+}
+
 /* App-specific styling */
 
 #app {
@@ -78,8 +138,11 @@ body {
 .caption-container {
   width: 80%;
   max-width: 700px;
-  padding: 0px 10px;
-  min-height: 90px;
+  padding: 10px;
+  margin-top: 10px;
+  min-height: 80px;
+  color: #f7f7f7;
+  font-family: Circular, BlinkMacSystemFont, Helvetica Neue, sans-serif;
 }
 
 .center-photo-selector {
@@ -87,13 +150,35 @@ body {
 }
 
 .left-selector-button {
-  /*width: 86.5px;*/
   width: 10%;
 }
 
+.left-selector-button:focus {
+  outline: none;
+  /*outline: #f7f7f7 auto 3px;*/
+}
+
+.left-selector-button:hover {
+  background-color: #333333;
+  transition: .1s;
+}
+
 .right-selector-button {
-  /*width: 86.5px;*/
   width: 10%;
+}
+
+.right-selector-button:focus {
+  outline: none;
+  /*outline: #f7f7f7 auto 3px;*/
+}
+
+.right-selector-button:hover {
+  background-color: #333333;
+}
+
+.arrow {
+  width: 100%;
+  opacity: .8;
 }
 
 .center-image-container {
@@ -103,7 +188,6 @@ body {
 
 .center-image {
   display: block;
-  max-width: 700px;
   width: 100%;
   height: auto;
 }
@@ -116,6 +200,7 @@ body {
 }
 
 .photo-carousel-container-wrapper {
+  margin-top: 10px;
   width: 90%;
 }
 
@@ -128,6 +213,7 @@ body {
 .photo-carousel-ul {
   list-style: none;
   padding: 0px;
+  transition: transform 0.3s ease-out;
 }
 
 .photo-carousel-list-item {
@@ -135,6 +221,10 @@ body {
   width: 100px;
   max-height: 67px; 
   overflow: hidden;
+}
+
+.photo-carousel-list-item:not(.image-not-in-focus) {
+  transition: .2s linear;
 }
 
 .photo-carousel-image {
@@ -149,6 +239,11 @@ body {
 
 .image-not-in-focus {
   filter: brightness(50%);
+}
+
+.image-not-in-focus:hover {
+  transition: .2s linear;
+  filter: brightness(100%);
 }
 
 /* Testing */
