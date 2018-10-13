@@ -16,9 +16,12 @@ const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto, windowWidth }) =>
   const maxPx = photos.length * (photoCarouselPhotoWidth + photoCarouselPhotoMargin);
   
   // Below if statements correctly set the leftShift px to be within bounds.
-  if (photoShiftPx > offSetPx) leftShift = photoShiftPx - offSetPx;
-  if (offSetPx > (maxPx - photoShiftPx)) leftShift = maxPx - (offSetPx * 2) - photoCarouselPhotoMargin;
-  
+  if (photoShiftPx > offSetPx) {
+    leftShift = photoShiftPx - offSetPx;
+  }
+  if (offSetPx > (maxPx - photoShiftPx)) {
+    leftShift = maxPx - (offSetPx * 2) - photoCarouselPhotoMargin;
+  }
   return (
     <div className='photo-carousel fc jc-c'>
       <div className='photo-carousel-container-wrapper fc jc-c'>
