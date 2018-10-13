@@ -6,7 +6,7 @@ import RightArrow from '../src/images/arrow-right.svg';
 const PhotoSelector = ({ photo, cycleLeft, cycleRight }) => (
   <div className='photo-selector fc fd-c ai-c'>
     <div className='caption fc jc-c'>
-      <div className='caption-container'>
+      <div className='caption-container fc ai-c'>
         <p>
           {photo.caption}
         </p>

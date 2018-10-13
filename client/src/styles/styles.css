@@ -138,8 +138,11 @@ button {
 .caption-container {
   width: 80%;
   max-width: 700px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
+  margin-top: 10px;
   min-height: 80px;
+  color: #f7f7f7;
+  font-family: Circular, BlinkMacSystemFont, Helvetica Neue, sans-serif;
 }
 
 .center-photo-selector {
@@ -157,6 +160,7 @@ button {
 
 .left-selector-button:hover {
   background-color: #333333;
+  transition: .1s;
 }
 
 .right-selector-button {
