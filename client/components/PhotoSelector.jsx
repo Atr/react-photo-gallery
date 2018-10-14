@@ -20,7 +20,7 @@ const PhotoSelector = ({ photo, cycleLeft, cycleRight }) => (
         <img src={photo.img} alt={photo.caption} className='center-image' />
       </div>
       <button type='button' className='right-selector-button ai-s' onClick={cycleRight}>
-        <img src={RightArrow} alt='right arrow icon' className='arrow'/>
+        <img src={RightArrow} alt='right arrow icon' className='arrow' />
       </button>
     </div>
   </div>
