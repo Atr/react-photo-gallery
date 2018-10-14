@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "start": "webpack & node server/server.js",
     "dev-mode": "npm run build-dev & npm run start-dev",
     "build-dev": "webpack --mode development --watch",
     "start-dev": "node server/server.js"
