@@ -3,13 +3,14 @@ import React from 'react';
 import PhotoCarouselPhoto from './PhotoCarouselPhoto';
 
 const PhotoCarousel = ({ photos, focusPhotoIndex, choosePhoto, windowWidth }) => {
-  const photoCarouselPhotoWidth = 100; // px - Should match width set in styles.css
-  const photoCarouselPhotoMargin = 10; // px - Should match margin set in syles.css
-  
+  const photoCarouselPhotoWidth = 100; // px - Should match width set in photo-carousel-list-item
+  const photoCarouselPhotoMargin = 10; // px - Should match margin set in photo-carousel-list-item
+  const mainPhotoMaxWidth = 700; // px - Should match max-width of center-image-container
+
   // The decimals in 'offSetPx' are to derive the width of the center image,
   // so that I can center the corresponding carousel picture.
   let leftShift = 0;
-  const offSetPx = windowWidth * 0.9 * 0.9 * 0.9 * 0.8 * 0.5;
+  const offSetPx = Math.min(windowWidth * 0.9 * 0.9 * 0.9 * 0.8 * 0.5, mainPhotoMaxWidth / 2);
   const photoShiftPx = (focusPhotoIndex
       * (photoCarouselPhotoWidth + photoCarouselPhotoMargin))
       + (photoCarouselPhotoWidth / 2);
