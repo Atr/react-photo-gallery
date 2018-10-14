@@ -151,6 +151,7 @@ button {
 
 .left-selector-button {
   width: 10%;
+  cursor: pointer;
 }
 
 .left-selector-button:focus {
@@ -165,6 +166,7 @@ button {
 
 .right-selector-button {
   width: 10%;
+  cursor: pointer;
 }
 
 .right-selector-button:focus {
@@ -230,7 +232,8 @@ button {
 .photo-carousel-image {
   display: block;
   height: auto;
-  width: 100%; 
+  width: 100%;
+  cursor: pointer;
 }
 
 .image-in-focus {
