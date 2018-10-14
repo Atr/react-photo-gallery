@@ -12,6 +12,7 @@ class PhotoGallery extends Component {
     this.cycleRight = this.cycleRight.bind(this);
     this.cycleLeft = this.cycleLeft.bind(this);
     this.choosePhoto = this.choosePhoto.bind(this);
+    this.cycleWithKeyboard = this.cycleWithKeyboard.bind(this);
 
     this.state = {
       allPhotos: photos,
@@ -24,6 +25,11 @@ class PhotoGallery extends Component {
     this.setState({
       windowWidth: window.innerWidth,
     });
+    document.addEventListener('keydown', this.cycleWithKeyboard);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.cycleWithKeyboard);
   }
 
   cycleRight() {
@@ -45,6 +51,14 @@ class PhotoGallery extends Component {
         focusPhotoIndex: newFocusIdx,
         windowWidth: window.innerWidth,
       });
+    }
+  }
+
+  cycleWithKeyboard(e) {
+    if (e.key === 'ArrowLeft') {
+      this.cycleLeft();
+    } else if (e.key === 'ArrowRight') {
+      this.cycleRight();
     }
   }
 
