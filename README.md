@@ -6,7 +6,7 @@ This is a photo carousel, built in React, with responsive design optimized for d
 
 ## Get It Running Locally:
 
-Enter the following in the command line:
+After cloning down the repo, enter the following in the command line:
 
 ```console
 $ npm install
